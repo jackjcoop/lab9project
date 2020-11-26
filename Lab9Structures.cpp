@@ -8,7 +8,6 @@
 #include <math.h>
 #include "Lab9Structures.h"
 
-
 //Default Constructor to Set to Zero
 Plane::Plane()
     {
@@ -67,7 +66,7 @@ double Plane::pointdistance(Point& P) const
 }
 
 // Mutator function!!
-Plane Plane::object(const Point& P) const
+Plane Plane::object(const vector<Point>& pointsVec) const
 {
 
 
