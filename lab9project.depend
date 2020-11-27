@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 1606416014 source:c:\users\jackj\onedrive\documents\engo_333\lab9project\algorithm2.cpp
 
-1606428231 source:c:\users\jackj\onedrive\documents\engo_333\lab9project\main.cpp
+1606429165 source:c:\users\jackj\onedrive\documents\engo_333\lab9project\main.cpp
 	<iostream>
 	<sstream>
 	<string>
@@ -1017,4 +1017,7 @@
 	<cmath>
 	<math.h>
 	"Lab9Structures.h"
+
+1606420655 source:c:\users\jackj\onedrive\documents\engo_333\lab9project\matrixiofunctions.cpp
+	"MatrixIOFunctions.h"
 
