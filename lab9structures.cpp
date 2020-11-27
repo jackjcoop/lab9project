@@ -30,7 +30,7 @@ Plane::Plane(double nx, double ny, double nz, double nd)
     }
 
 //Set function. Sets values for data members.
-void Plane::set(double nx, double ny, double nz, double nd)
+void Plane::Set(double nx, double ny, double nz, double nd)
     {
         nx_plane = nx;
         ny_plane = ny;
