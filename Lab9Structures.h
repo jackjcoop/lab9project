@@ -35,7 +35,7 @@ public:
     Plane(double nx, double ny, double nz, double nd);
 
 //Set function, set values for all private data members
-    void set(double nx, double ny, double nz, double nd);
+    void Set(double nx, double ny, double nz, double nd);
 
 //get function, retrieves values of private data members
     Plane get(Plane P) const;
