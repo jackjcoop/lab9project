@@ -38,7 +38,10 @@ public:
     void Set(double nx, double ny, double nz, double nd);
 
 //get function, retrieves values of private data members
-    Plane get(Plane P) const;
+    int get_nx_plane() const;
+    int get_ny_plane() const;
+    int get_nz_plane() const;
+    int get_d_plane() const;
 
 //function to find distance between plane and the point
     double pointdistance(Point& P) const;
