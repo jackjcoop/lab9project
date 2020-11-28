@@ -41,11 +41,10 @@ void Plane::Set(double nx, double ny, double nz, double nd)
     }
 
 //Get function. Retrieves values. Help Jackson! How do I make this???
-Plane Plane::get(Plane P) const
-    {
-        Plane A = P;
-        return A;
-    }
+int Plane::get_nx_plane() const { return nx_plane; }
+int Plane::get_ny_plane() const { return ny_plane; }
+int Plane::get_nz_plane() const { return nz_plane; }
+int Plane::get_d_plane() const { return d_plane; }
 
 //Function to calculate distance between point and plane.
 double Plane::pointdistance(Point& P) const
