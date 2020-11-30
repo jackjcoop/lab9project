@@ -32,7 +32,7 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
         t += 1;
         I[t] = false;
 
-        double rows = rand()%pointsVec.rows();
+        double rows = rand()%B.rows();
 
         fitPlane(B);
         int i, j = 0;
