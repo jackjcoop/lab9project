@@ -64,9 +64,9 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
     {
         if(I[k] == true)
         {
-            P(k,1) = matrix(k,1);
-            P(k,2) = matrix(k,2);
-            P(k,3) = matrix(k,3);
+            P(k,1) = P(k,1);
+            P(k,2) = P(k,2);
+            P(k,3) = P(k,3);
         }
     }
     fitPlane(P);
