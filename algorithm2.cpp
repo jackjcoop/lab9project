@@ -1,6 +1,14 @@
 #include <iostream>
-#include "Lab9Structures.h"
+#include <sstream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+#include "Eigen/Dense"
 #include "Eigen/Eigen"
+#include <cmath>
+#include <math.h>
+#include "Lab9Structures.h"
+#include "MatrixIOFunctions.h"
 
 
 using namespace std;
@@ -24,7 +32,7 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
         t += 1;
         I[t] = false;
 
-        double rows = rand()%matrix.rows();
+        double rows = rand()%pointsVec.rows();
 
         fitPlane(B);
         int i, j = 0;
@@ -33,7 +41,7 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
         do
         {
             B(i,0) = 0;
-            B(i,j) = matrix(numPoints - 1, j);
+            B(i,j) = pointsVec(numPoints - 1, j);
             j++;
         }
         while(i< 3 && j < 3)
@@ -44,6 +52,7 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
         for(int k = 0; k < numPoints; k++)
         {
 
+        if()
         }
 
     }
