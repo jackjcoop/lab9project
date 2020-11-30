@@ -130,23 +130,6 @@ for (int i = 0; i < Seeds5.rows(); i++)
     }
 }
 
-// Matching Seeds5.txt to points in Point Cloud
-MatrixXd Match5(Seeds5.rows(), 4);
-for (int i = 0; i < Seeds5.rows(); i++)
-{
-    for (int a = 0; a < r; a++)
-    {
-        if (Seeds5(i, 0) == PointCloud(a, 0))
-        {
-            Match5(i,0) = PointCloud(a, 0);
-            Match5(i,1) = PointCloud(a, 1);
-            Match5(i,2) = PointCloud(a, 2);
-            Match5(i,3) = PointCloud(a, 3);
-        }
-
-    }
-}
-
 // Matching Seeds6.txt to points in Point Cloud
 MatrixXd Match6(Seeds6.rows(), 4);
 for (int i = 0; i < Seeds6.rows(); i++)
@@ -174,7 +157,7 @@ for (int i = 0; i < Seeds6.rows(); i++)
 //part e, creating a new matrix and concatenate with the others.
 
 //part f, output file
-WriteMatrixToFile(/*MatrixName*/, "OutputPointCloud.txt", 15);
+//WriteMatrixToFile(/*MatrixName*/, "OutputPointCloud.txt", 15);
 
 //part g, convert Plane vector to Eigen Matrix
 

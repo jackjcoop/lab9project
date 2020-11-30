@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Lab9Structures.h"
-#include "..\..\eigen-3.3.8\Eigen\Eigen" // need to change
+#include "Eigen/Eigen"
 
 using namespace std;
 using namespace Eigen;
