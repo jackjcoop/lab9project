@@ -18,7 +18,7 @@ vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type poi
 
     //intializing intial values of 0 and the length of points numPoints
     int t,c= 0;
-    int numPoints = matrix.size();
+    int numPoints = matrix.rows();
 
     //intializing the boolean vector of size numPoints from the inputted matrix
     vector<bool> I;
@@ -29,26 +29,25 @@ vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type poi
         t += 1;
         MatrixXd B(3,3);
 
-        for(int i = 0; i < numPoint; i++)
+        for(int i = 0; i < numPoints; i++)
         {
             I[t] = false;
         }
 
+
         //populating matrix B with random
-        for(int i = 0; i < 3, i++)
+        for(int i = 0; i < 3; i++)
         {
             double rand_row = rand()%B.rows();
-            B(i,:) = matrix(rand_row,:);
-
-         /*   for(int j = 0; j < 3, j++)
+            for(int j = 0; j < 3; j++)
             {
-               B(i,j) = matrix()
-            } */
+               B(i,j) = matrix(rand_row,j);
+            }
 
         }
 
         //passing B into algorithm one
-        algorithm1(B);
+        //algorithm_1(B);
 
         c = 0;
 
@@ -65,7 +64,7 @@ vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type poi
 
            if(distance_length < 0.01)
            {
-            I[k] = true;
+            I[j] = true;
             c++;
            }
         }
@@ -74,7 +73,7 @@ vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type poi
 
     MatrixXd P(c,3);
 
-    for(int i = 0; i < numPoints, i++)
+    for(int i = 0; i < numPoints; i++)
     {
         if(I[i] == true)
         {
@@ -83,8 +82,7 @@ vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type poi
             P(i,2) = matrix(i,2);
         }
     }
-
-    algorithm1(B);
+    algorithm1(P);
 
     return I;
 
