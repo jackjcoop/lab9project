@@ -6,7 +6,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "..\eigen-3.3.8\Eigen\Eigen"
+#include "Eigen/Eigen"
 
 using namespace std;
 using namespace Eigen;
