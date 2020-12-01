@@ -13,9 +13,16 @@
 	"Lab9Structures.h"
 	"MatrixIOFunctions.h"
 
-1606759199 c:\users\jackj\onedrive\documents\engo_333\lab9project\lab9structures.h
+1606803960 c:\users\jackj\onedrive\documents\engo_333\lab9project\lab9structures.h
 	<vector>
 	<string>
+	"Eigen/Dense"
+	<cstdlib>
+	<sstream>
+	<string>
+	<fstream>
+	<iomanip>
+	<iostream>
 
 1606793766 c:\users\jackj\onedrive\documents\engo_333\lab9project\matrixiofunctions.h
 	<iostream>

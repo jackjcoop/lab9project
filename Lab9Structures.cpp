@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iomanip>
 #include "Eigen/Dense"
+#include "Eigen/Eigen"
 #include <cmath>
 #include <math.h>
 #include "Lab9Structures.h"

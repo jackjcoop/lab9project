@@ -32,6 +32,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Lab9Structures.cpp" />
+		<Unit filename="Lab9Structures.h" />
+		<Unit filename="MatrixIOFunctions.cpp" />
+		<Unit filename="MatrixIOFunctions.h" />
+		<Unit filename="PointCloudData.txt" />
+		<Unit filename="Seeds1.txt" />
+		<Unit filename="Seeds2.txt" />
+		<Unit filename="Seeds3.txt" />
+		<Unit filename="Seeds4.txt" />
+		<Unit filename="Seeds5.txt" />
+		<Unit filename="Seeds6.txt" />
+		<Unit filename="TestAlgorithm1.txt" />
+		<Unit filename="TestAlgorithm2.txt" />
+		<Unit filename="algorithm.h" />
+		<Unit filename="algorithm1.cpp" />
+		<Unit filename="algorithm2.cpp" />
+		<Unit filename="lab9project.cbp" />
+		<Unit filename="lab9project.depend" />
+		<Unit filename="lab9project.layout" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
