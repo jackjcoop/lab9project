@@ -58,7 +58,7 @@ public:
 void algorithm1(Eigen::MatrixXd matrix);
 
 //algorithm 2
-vector<bool> RANSAC(Eigen::MatrixXd matrix);
+vector<bool> algorithm2(Eigen::MatrixXd matrix);
 
 
     //github test push

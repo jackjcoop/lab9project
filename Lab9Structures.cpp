@@ -154,7 +154,7 @@ void Plane::algorithm1(Eigen::MatrixXd matrix)
 
 }
 
-vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type point
+vector<bool> Plane::algorithm2(MatrixXd matrix) { //argument is a vector of type point
 
     //intializing intial values of 0 and the length of points numPoints
     int t,c= 0;
