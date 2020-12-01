@@ -2,6 +2,13 @@
 #define LAB9STRUCTURES_H_INCLUDED
 #include <vector>
 #include <string>
+#include "Eigen/Dense"
+#include <cstdlib>
+#include <sstream>
+#include <string>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
 
 using namespace std;
 
@@ -47,7 +54,12 @@ public:
     double pointdistance(Point& P) const;
 
 //mutator function that receives a matrix
-    Plane object(const Point& P) const;
+
+void algorithm1(Eigen::MatrixXd matrix);
+
+//algorithm 2
+void algorithm2(Eigen::MatrixXd matrix);
+
 
     //github test push
 
