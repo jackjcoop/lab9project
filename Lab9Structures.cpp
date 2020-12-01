@@ -195,12 +195,12 @@ vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type poi
         {
            //intializing point object with coordiantes x,y,z
            Point object;
-           object.x = matrix(j,1);
-           object.y = matrix(j,2);
-           object.z = matrix(j,3);
+           object.xi = matrix(j,1);
+           object.yi = matrix(j,2);
+           object.zi = matrix(j,3);
 
            //computing distance of the object
-           double distance_length = distance(object);
+           double distance_length = pointdistance(object);
 
            if(distance_length < 0.01)
            {

@@ -22,7 +22,7 @@ MatrixXd ReadDataToMatrix(const string& filename)
 
 	// Create a string object
 	string line;
-
+s
 	// Read the first line
 	if (!getline(in, line))
 	{
