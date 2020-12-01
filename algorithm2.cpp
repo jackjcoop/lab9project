@@ -14,12 +14,12 @@
 using namespace std;
 using namespace Eigen;
 
-Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
+Plane RANSAC(vector<bool> boolVec) { //argument is a vector of type point
 
     int t,c= 0;
 
     Plane result = Plane();
-    int numPoints = pointsVec.size();
+    int numPoints = boolVec.size();
 
     vector<bool> I;
     I.resize(numPoints);
