@@ -14,44 +14,84 @@
 using namespace std;
 using namespace Eigen;
 
-Plane RANSAC(vector<bool> boolVec) { //argument is a vector of type point
+vector<bool> Plane::RANSAC(MatrixXd matrix) { //argument is a vector of type point
 
+    //intializing intial values of 0 and the length of points numPoints
     int t,c= 0;
+    int numPoints = matrix.size();
 
-    Plane result = Plane();
-    int numPoints = boolVec.size();
-
+    //intializing the boolean vector of size numPoints from the inputted matrix
     vector<bool> I;
     I.resize(numPoints);
-
-    MatrixXd B(3,3);
 
     do
     {
         t += 1;
-        I[t] = false;
+        MatrixXd B(3,3);
 
-        double rows = rand()%B.rows();
+        for(int i = 0; i < numPoint; i++)
+        {
+            I[t] = false;
+        }
 
-        fitPlane(B);
-        int i, j = 0;
+        //populating matrix B with random
+        for(int i = 0; i < 3, i++)
+        {
+            double rand_row = rand()%B.rows();
+            B(i,:) = matrix(rand_row,:);
 
+         /*   for(int j = 0; j < 3, j++)
+            {
+               B(i,j) = matrix()
+            } */
 
+        }
+
+        //passing B into algorithm one
+        algorithm1(B);
+
+        c = 0;
+
+        for(int j = 0; j < numPoints; j++)
+        {
+           //intializing point object with coordiantes x,y,z
+           Point object;
+           object.x = matrix(j,1);
+           object.y = matrix(j,2);
+           object.z = matrix(j,3);
+
+           //computing distance of the object
+           double distance_length = distance(object);
+
+           if(distance_length < 0.01)
+           {
+            I[k] = true;
+            c++;
+           }
+        }
+    }
     while (c < (numPoints / 2) && t < 50);
 
     MatrixXd P(c,3);
 
     for(int i = 0; i < numPoints, i++)
     {
-        if(I[k] == true)
+        if(I[i] == true)
         {
-            P(k,1) = P(k,1);
-            P(k,2) = P(k,2);
-            P(k,3) = P(k,3);
+            P(i,0) = matrix(i,0);
+            P(i,1) = matrix(i,1);
+            P(i,2) = matrix(i,2);
         }
     }
-    fitPlane(P);
 
+    algorithm1(B);
 
-  return result;
+    return I;
+
 }
+
+
+
+
+
+
