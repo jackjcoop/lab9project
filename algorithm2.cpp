@@ -24,6 +24,8 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
     vector<bool> I;
     I.resize(numPoints);
 
+    MatrixXd B(3,3);
+
     do
     {
         t += 1;
@@ -31,28 +33,8 @@ Plane RANSAC(vector<Point> pointsVec) { //argument is a vector of type point
 
         double rows = rand()%B.rows();
 
-        B.fitPlane(B);
+        fitPlane(B);
         int i, j = 0;
-
-
- /*       do
-        {
-            B(i,0) = 0;
-            B(i,j) = pointsVec(numPoints - 1, j);
-            j++;
-        }
-        while(i< 3 && j < 3)
-
-        i++
-        c = 0;
-
-        for(int k = 0; k < numPoints; k++)
-        {
-
-        if()
-        }
-
- */
 
 
     while (c < (numPoints / 2) && t < 50);

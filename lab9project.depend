@@ -17,13 +17,13 @@
 	<vector>
 	<string>
 
-1606420655 c:\users\jackj\onedrive\documents\engo_333\lab9project\matrixiofunctions.h
+1606793766 c:\users\jackj\onedrive\documents\engo_333\lab9project\matrixiofunctions.h
 	<iostream>
 	<iomanip>
 	<fstream>
 	<string>
 	<vector>
-	"..\eigen-3.3.8\Eigen\Eigen"
+	"Eigen/Eigen"
 
 1606412591 c:\users\jackj\onedrive\documents\engo_333\eigen-3.3.8\eigen\eigen
 	"Dense"
